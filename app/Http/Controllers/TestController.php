@@ -11,4 +11,10 @@ class TestController extends Controller
         $comic = \App\Models\Test::findOrFail($id);
         return view('title_view',compact('comic'));
     }
+
+    public function create()
+    {
+        return view('register.create');
+    }
+
 }

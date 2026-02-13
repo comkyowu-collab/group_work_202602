@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+/* 共通部分
+------------------------------- */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
+    line-height: 1.7;
+    background-image: url(../images/bg_sp.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* レイアウト */
+.wrapper {
+    max-width: 1120px;
+    margin: auto;
+    padding: 0 3rem;
+}
+
+/* 見出し */
+
+.page-title {
+    position: static;
+    margin-top: 160px;
+    text-align: center;
+}
+
+.page-title img {
+    width: 230px;
+    /* ← ここでサイズ調整 */
+    max-width: 80%;
+    height: auto;
+}
+
+/* ヘッダー
+------------------------------- */
+.page-header {
+    display: flex;
+    align-items: center;
+    padding: .5rem 1.5rem;
+    background-image: url(../images/header_sp.jpg);
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-width: 100%;
+    z-index: 100;
+}
+
+.return {
+    width: 70%;
+}
+
+.logo {
+    width: 160px;
+    margin-left: -1.5rem;
+}
+
+
+
+.grid {
+    padding-top: 60px;
+    display: grid;
+    gap: 2rem 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    margin-bottom: 12rem;
+}
+
+.item img {
+    aspect-ratio: 1/1.42;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 10px solid white;
+
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, .12),
+        0 8px 16px rgba(0, 0, 0, .18),
+        0 16px 32px rgba(0, 0, 0, .22);
+
+    transform: translateY(0);
+    transition:
+        box-shadow .35s cubic-bezier(.4, 0, .2, 1),
+        transform .35s cubic-bezier(.4, 0, .2, 1);
+}
+
+.item img:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 6px 12px rgba(0, 0, 0, .18),
+        0 16px 32px rgba(0, 0, 0, .28),
+        0 32px 64px rgba(0, 0, 0, .32);
+}
+
+.item p {
+    font-size: 2rem;
+    color: #000;
+
+    text-shadow:
+        -2px -2px 0 #fff,
+        2px -2px 0 #fff,
+        -2px 2px 0 #fff,
+        2px 2px 0 #fff,
+        0 3px 6px rgba(0, 0, 0, .35);
+}
+
+/* PC版 */
+@media screen and (min-width: 1024px) {
+    body {
+        background-image: url(../images/bg_pc.jpg);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+
+    .page-header {
+        background-image: url(../images/header_pc.jpg);
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem 2rem;
+    }
+}

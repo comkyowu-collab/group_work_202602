@@ -1,7 +1,12 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ComicController;
 use Illuminate\Support\Facades\Route;
+
+
+Route::get('/comic/titleview/{id}',[ComicController::class,'titleview']);
+
 
 Route::get('/', function () {
     return view('welcome');

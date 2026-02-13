@@ -57,7 +57,7 @@
                 <div class="relative group">
                     <div class="absolute -inset-1 bg-gray-400 rounded-sm blur opacity-25"></div>
                     <img 
-                        src="{{ asset('image/' . $comic->image_path . '.jpg') }}" 
+                        src="{{ asset('image/' . $comic->image_path) }}" 
                         alt="{{ $comic->title }}"
                         class="relative w-full max-w-[360px] h-auto border-4 border-white shadow-2xl rounded-sm"
                     >

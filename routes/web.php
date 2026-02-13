@@ -2,10 +2,14 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ComicController;
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
-
-Route::get('/comic/titleview/{id}',[ComicController::class,'titleview']);
+Route::get('/test-route', function() {
+    return "テスト成功！ルートは生きています。";
+});
+Route::get('/comic/titleview/{id}',[TestController::class,'titleview']);
+// Route::get('/comic/titleview/{id}',[ComicController::class,'titleview']);
 
 
 Route::get('/', function () {
